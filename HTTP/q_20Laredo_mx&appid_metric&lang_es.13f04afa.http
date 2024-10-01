@@ -1,0 +1,15 @@
+HTTP/1.1 401 Unauthorized
+access-control-allow-credentials: true
+access-control-allow-methods: GET, POST
+access-control-allow-origin: *
+connection: keep-alive
+content-length: 108
+content-type: application/json; charset=utf-8
+date: Mon, 30 Sep 2024 19:02:23 GMT
+server: openresty
+x-cache-key: /data/2.5/weather?lang=es&q=nuevo%20laredo,mx&units=metric
+
+{
+  "cod": 401,
+  "message": "Invalid API key. Please see https://openweathermap.org/faq#error401 for more info."
+}
