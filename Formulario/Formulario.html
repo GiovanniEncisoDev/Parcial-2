@@ -1,23 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de formularios</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-</head>
-<body>
-    <form action="#" method="post" enctype="multipart/form-data" class="pure-form">
-        <label for="nom">Nombre</label>
-        <input type="text" name="nombre" id="nom">
-        <label for="nom">ApellidoP</label>
-        <input type="text" name="apellidop" id="apep">
-        <label for="nom">ApellidoM</label>
-        <input type="text" name="apellidom" id="apem">
+    <title>Formulario Completo con Pure CSS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
 
-        <input class="pure-button pure-button-primary" type="button" value="Js">
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .pure-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .pure-form input[type="text"],
+        .pure-form input[type="email"],
+        .pure-form input[type="tel"],
+        .pure-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .pure-form .pure-button {
+            margin-top: 10px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-bottom: 20px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post" enctype="multipart/form-data" class="pure-form pure-form-stacked">
+        <h1 class="form-title">Registro de Usuario</h1>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre">
+
+        <label for="apep">Apellido Paterno</label>
+        <input type="text" name="apellidop" id="apep" placeholder="Ingresa tu apellido paterno">
+
+        <label for="apem">Apellido Materno</label>
+        <input type="text" name="apellidom" id="apem" placeholder="Ingresa tu apellido materno">
+
+        <label for="email">Correo Electrónico</label>
+        <input type="email" name="email" id="email" placeholder="Ingresa tu correo electrónico">
+
+        <label for="tel">Número de Teléfono</label>
+        <input type="tel" name="telefono" id="tel" placeholder="Ingresa tu número de teléfono">
+
+        <label for="pais">País</label>
+        <select name="pais" id="pais">
+            <option value="mexico">México</option>
+            <option value="usa">Estados Unidos</option>
+            <option value="espana">España</option>
+            <option value="argentina">Argentina</option>
+        </select>
+
+        <div class="radio-group">
+            <label>Género</label>
+            <label for="masculino">
+                <input type="radio" name="genero" id="masculino" value="masculino"> Masculino
+            </label>
+            <label for="femenino">
+                <input type="radio" name="genero" id="femenino" value="femenino"> Femenino
+            </label>
+            <label for="otro">
+                <input type="radio" name="genero" id="otro" value="otro"> Otro
+            </label>
+        </div>
+
+        <div class="checkbox-group">
+            <label for="suscripcion">
+                <input type="checkbox" name="suscripcion" id="suscripcion"> Quiero recibir actualizaciones por correo
+            </label>
+        </div>
+
         <input class="pure-button pure-button-primary" type="submit" value="Enviar">
-        <input class="pure-button pure-button-primary" type="reset" value="Limpiar">
+        <input class="pure-button pure-button-secondary" type="reset" value="Limpiar">
     </form>
 </body>
+
 </html>
