@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloatware</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            font-family:Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            line-height: 1.7em;
+            text-align: justify;
+            margin: 0;
+            padding: 0;
+        }
+        #contenedor{
+            width: 60%;
+            margin: 0 auto; 
+            padding: 20px;
+            background-color: white;  
+            box-shadow: 0 px 0px 0px 0px rgba(0,0,0,0.1);       
+        }
+        img{
+            float: right;
+            width: 400px;
+            height: 200px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        h1, h2{
+            text-align: center;
+            color: darkslategray;
+        }
+        h1{
+            margin-bottom: 2.5em;
+            font-size: 2em;
+            
+        }
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+        }
+        p{
+            margin-bottom: 25px; 
+            text-indent: 20px;   
+        }
+        ul{
+            list-style-type: square;
+            margin-left: 40px;
+            margin-bottom: 20px;
+        }
+        li{
+            margin-bottom: 5px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        a{
+            color: darkblue;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        @media(max-width:768px){
+            #contenedor{
+                width: 90%;
+            } 
+            img{
+                width: 100%; 
+                height: auto; 
+                float: none; 
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="Contenedor">
+    <h1>Bloatware</h1>
+    <img src="/ArticuloDOM/Imagen bloat.png" alt="Bloatware">
+    <p>
+        En el inicio de la era de la informática, los primeros ordenadores tenían grandes limitaciones de recursos, tanto en memoria de disco como de espacio de almacenamiento. Por eso, las aplicaciones intentaban reducirse al máximo, una necesidad que empezó a desaparecer años después con el desarrollo y la bajada de precios de nuevos sistemas de almacenamiento con más capacidad.
+    </p>
+    <p>
+        Entonces empezó a pasar justo lo contrario, que las aplicaciones empezaron a ganar peso sin que eso repercutiera siempre en tener grandes mejoras. Por eso, empezó a utilizarse el término <strong>Bloatware</strong> para definir al software que proporcionaba mínimas funcionalidades mientras requería una cantidad desproporcionada de espacio, y se utilizaba sobre todo para referirse a las actualizaciones de aplicaciones y sistemas operativos.
+    </p>
+    <p>
+        El principal problema de estas aplicaciones es que incluso para hacer las mínimas tareas hacía falta cargarlas y gastar grandes cantidades de recursos de los ordenadores. Sin embargo, y aunque esta definición sigue siendo la oficial y la que encontrarás en páginas como Wikipedia, en la práctica se utiliza la palabra <strong>Bloatware</strong> para referirse a otro tipo de aplicación que tiene cierta relación con lo anterior, pero no siempre es lo mismo.
+    </p>
+    <h2>Cómo deshacerte del bloatware</h2> 
+    <p>
+        Hay varias alternativas para deshacerte del bloatware. Por una parte, puedes simplemente desinstalarlo de tu equipo. Para ello, en Windows 10 es suficiente con abrir el menú de inicio y hacer click derecho sobre la aplicación que quieras eliminar, y en las opciones que te aparezcan elegir la de <strong>Desinstalar</strong>. Puede que haya aplicaciones que Windows considere esenciales que no puedas borrar, pero la mayoría de bloatware podrás eliminarlo.
+    </p>
+    <p>
+        Otra opción en Windows 10 es utilizar <strong>Windows PowerShell</strong> para desinstalar las aplicaciones nativas que no puedes eliminar de forma habitual. Ejecuta PowerShell como administrador y utiliza el siguiente comando:
+    </p>
+    <p>
+        <code>Get-AppxPackage "nombre de la app" | Remove-AppxPackage</code>
+    </p>
+    <p>
+        Aquí tienes una lista de los nombres en código para desinstalar algunas aplicaciones preinstaladas:
+    </p>
+            <ul>
+                <li>3D Builder: <code>3dbuilder</code></li>
+                <li>Alarmas y reloj: <code>alarms</code></li>
+                <li>Calculadora: <code>calculator</code></li>
+                <li>Calendario y Correo: <code>communicationsapps</code></li>
+                <li>Cámara: <code>camera</code></li>
+                <li>Películas y TV: <code>zunevideo</code></li>
+                <li>Obtener Office: <code>officehub</code></li>
+                <li>Prueba Skype: <code>skypeapp</code></li>
+                <li>Get Started: <code>getstarted</code></li>
+                <li>Groove Música: <code>zunemusic</code></li>
+                <li>Mapas: <code>maps</code></li>
+                <li>Mensajes: <code>messaging</code></li>
+                <li>Microsoft Solitaire Collection: <code>solitaire</code></li>
+                <li>Noticias: <code>bingnews</code></li>
+                <li>OneNote: <code>onenote</code></li>
+                <li>Fotos: <code>photos</code></li>
+                <li>Grabadora de voz: <code>soundrecorder</code></li>
+                <li>El Tiempo: <code>bingweather</code></li>
+                <li>Xbox: <code>Xbox</code></li>
+            </ul> <p>
+                También puedes hacer una instalación limpia de Windows 10 usando la herramienta <strong>Refresh Windows Tool</strong> de Microsoft, que eliminará todas las aplicaciones no esenciales del sistema. Recuerda hacer una copia de seguridad de tus archivos personales antes de realizar este proceso.
+            </p>
+            <p>
+                En Android, puedes desinstalar aplicaciones entrando en la tienda de aplicaciones, accediendo a "Mis aplicaciones y juegos", y eligiendo la opción de desinstalar. Para aplicaciones que no puedas borrar, necesitarás rootear tu dispositivo.
+            </p>
+            <h2>Bibliografía</h2>
+            <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Bloatware" target="_blank">Wikipedia: Bloatware</a></li>
+                <li><a href="https://www.xataka.com/basics/que-es-bloatware-y-como-eliminarlo-de-tu-ordenador-o-movil" target="_blank">Xataka: Qué es el bloatware y cómo eliminarlo</a></li>
+                <li><a href="https://support.microsoft.com/es-es/help/4026246/windows-10-remove-bloatware" target="_blank">Microsoft Support: Cómo eliminar el bloatware en Windows 10</a></li>
+            </ul>
+</div>
+</body>
+</html> 
