@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="contenedor">
+    <p>Esto es un parrafo</p>
+    <!-- Esto es un comentario -->
+    Esto es un texto
+  </div>
+  <script>
+    window.onload = function() {
+      //↓ recorrer con for of o for each 
+      let elemento = document.getElementById('contenedor');
+      console.log('Children');
+      console.log('-----------------');
+      console.log(elemento.children);
+      console.log('ChildNodes');
+      console.log('-----------------');
+      console.log(elemento.childNodes);
+      //padre/hijo→parentnode/childnode   contenido→innerhtml/innertext/textocontent   clases→classlist/remove/add/toggle/contains
+    }
+  </script>
+</body>
+</html>
