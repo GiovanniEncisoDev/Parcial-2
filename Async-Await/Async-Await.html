@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    async function main() {
+      try {
+        let miPromesa = new Promise((resolve, reject) => {
+          let n = window.prompt("Teclee su nombre");
+          let a = window.prompt("Teclee su apellido");
+          resolve(n + ' ' + a);
+        })
+        let nombreCompleto = await miPromesa;
+        concatenar(nombreCompleto);
+      } catch (error) {
+        console.error(error);
+      }}
+      function concatenar(nombreCompleto){
+        window.alert(nombreCompleto);
+      }
+      main();
+  </script>
+</body>
+</html>
