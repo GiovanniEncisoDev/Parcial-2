@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Presidentes de México</title>
+</head>
+<body>
+  <h1>Presidentes de México</h1>
+  <div id="contenedor"></div>
+
+  <script>
+    // Cargar el archivo JSON 
+    fetch('_Presidentes.json')
+      .then(response => response.json())
+      .then(data => {
+        // Crear una lista UL
+        let lista = document.createElement('ul');
+
+        // Recorrer el arreglo de presidentes
+        data.forEach(presidente => {
+          // Crear un LI para cada presidente
+          let item = document.createElement('li');
+
+          // Crear el contenido con nombre y lugar de nacimiento
+          let texto = document.createTextNode(
+            `Nombre: ${presidente.nombre}, Lugar de nacimiento: ${presidente.lugar_nacimiento}`
+          );
+
+          item.appendChild(texto); // Agregar texto al LI
+          lista.appendChild(item); // Agregar LI al UL
+        });
+
+        // Agregar la lista al contenedor
+        document.getElementById('contenedor').appendChild(lista);
+      })
+      .catch(error => {
+        console.error('Error al cargar el JSON:', error);
+      });
+  </script>
+</body>
+</html>
